@@ -1,0 +1,63 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- banner  -->
+  <view class="swiper-container">
+    <swiper class="swiper_box" indicator-dots="true" autoplay="true" indicator-color="rgba(255, 255, 255, .3)" indicator-active-color="#fff" circular="true">
+      <swiper-item wx:for-items="{{banner}}" wx:key="{{item.targetId}}">
+        <image src="{{item.pic}}" class="slide-image" width="750" height="290" mode='aspectFit' />
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="m-homeremd">
+    <text class="remd_tl">推荐歌单</text>
+  </view>
+  <!-- 推荐歌单  -->
+  <view class='remd_songs'>
+    <view class='remd_ul'>
+      <view class='remd_li' wx:for-items="{{remd}}" wx:for="{{array}}" wx:key="item.remdId">
+        <view class='remd_img'>
+          <image class='u-img' src="{{item.picUrl}}" mode="aspectFit"></image>
+        </view>
+        <view class='u-earp remd_lnum'>{{item.playCount}}</view>
+        <view class='remd_text'>{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+  <!--推荐歌单  -->
+  <view class="m-homeremd">
+    <text class="remd_tl">最新音乐</text>
+  </view>
+  <!--最新音乐  -->
+  <view class='remd_newsg'>
+    <view class='m-sglst'>
+      <view class='m-sgitem' wx:for-items="{{sglist}}" wx:key="item.sglistId">
+        <view class='sgfr f-bd f-bd-btm'>
+
+          <view class='sgchfl'>
+            <view class='f-thide sgtl'>
+            {{item.song.name}}
+            </view>
+            <view class='f-thide sginfo'>
+              <icon class='u-hmsprt sghot'></icon>
+              {{item.song.artists[0].name}}/{{item.song.artists[1].name}}-{{item.song.name}}
+            </view>
+          </view>
+
+          <view class='sgchfr'>
+          <icon class='u-hmsprt sgchply'></icon>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--最新音乐  -->
+  <!--footer  -->
+  <view class='m-homeft'>
+    <view class='ftwrap'>
+      <view class='logo'>
+        <image class='footer-logo' src='../../images/footerlogo.png'></image>
+      </view>
+    </view>
+  </view>
+  <!--footer  -->
+</view>
