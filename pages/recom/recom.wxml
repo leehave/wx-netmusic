@@ -1,2 +1,47 @@
 <!--pages/recom/recom.wxml-->
-<text>pages/recom/recom.wxml</text>
+<view class='m-hmhot'>
+<!--热歌榜  -->
+  <view class='hotop'>
+    <view class='hotopct'>
+      <icon class='u-hmsprt hoticon'></icon>
+      <view class='hottime'>
+      <text>
+      更新时间：{{updataTime}}
+      </text>
+      </view>
+    </view>
+  </view>
+  <!--热歌榜  -->
+  <!--热歌列表  -->
+  <view class='hotcont'>
+    <view class='m-sglst' wx:for-items="{{singlist}}" wx:for-index="idx" wx:key="singId">
+      <view class='m-sgitem'>
+        <view class="sgfl {{idx < 3 ? 'sgfl-cred' : ''}}" wx:if="condition">{{idx+1}}</view>
+        <view class='sgfr f-bd f-bd-btm'>
+
+          <view class='sgchfl'>
+            <view class='f-thide sgtl'>
+              {{item.name}}<text class='sgalia'>{{item.alia}}</text>
+            </view>
+            <view class='f-thide sginfo'>
+            <icon class='u-hmsprt sghot'></icon>{{item.ar[0].name}}-{{item.al.name}}
+            </view>
+          </view>
+          <view class='sgchfr'>
+            <icon class='u-hmsprt sgchply'></icon>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--热歌列表  -->
+  <block wx:if="{{!list.playlist.tracks.length}}">
+      <view class="cntloading">加载中...
+        <view>
+          <text class="cl1"></text>
+          <text class="cl2"></text>
+          <text class="cl3"></text>
+        </view>
+      </view>
+    </block>
+</view>
