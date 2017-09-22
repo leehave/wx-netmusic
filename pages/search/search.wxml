@@ -1,2 +1,16 @@
 <!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+<view class="m-hmsrch">
+<!--search  -->
+  <form class="m-input f-bd f-bd-btm">
+    <view class="inputcover">
+      <icon class="u-svg u-svg-srch"></icon>
+      <input class="input"></input>
+      <label class="holder">搜索歌曲、歌手、专辑</label>
+      <view class="close">
+        <icon class="u-svg u-svg-empty"></icon>
+      </view>
+    </view>
+  </form>
+  <!--search  -->
+  
+</view>
