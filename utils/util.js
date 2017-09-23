@@ -41,7 +41,9 @@ function formatTime(date, type) {
     }
   }
 }
-
+function numToStr(str) {
+  return str >= 1e8 ? Math.floor(str / 1e7) / 10 + "亿" : str >= 1e5 ? Math.floor(str / 1e3) / 10 + "万" : str
+}
 function formatNumber(n) {
   n = n.toString()
   return n[1] ? n : '0' + n
@@ -334,5 +336,6 @@ module.exports = {
   loadlrc: loadlrc,
   loadrec: loadrec,
   songheart: songheart,
-  toggleplay: toggleplay
+  toggleplay: toggleplay,
+  numToStr: numToStr
 }

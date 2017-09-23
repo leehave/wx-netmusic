@@ -41,6 +41,7 @@ Page({
     var s = time.getSeconds();
     return this.addTime(m) + '月' + this.addTime(d) + '日';
   },
+
   /* 
   热歌榜
    */

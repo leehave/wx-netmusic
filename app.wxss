@@ -6,3 +6,23 @@
   justify-content: space-between;
   box-sizing: border-box;
 } 
+.tab{display: flex;border-bottom: 1rpx solid rgba(200,200,200,.5); background:rgba(240,240,240,.8);height: 80rpx;line-height: 80rpx;}
+.tab .tab-item{text-align: center; flex:auto; word-break: keep-all;font-size: 30rpx;}
+.tab .tab-item .tbi-text{display: inline-block;padding: 0 .3em; vertical-align: top;line-height: 76rpx;height: 77rpx;}
+.tab .tab-item .tbi-des{display: inline;color: #999; border-bottom: none;font-size: 24rpx;line-height: 1;padding-left: .5em}
+.tab .tbi-cur .tbi-text{color: #d33a31; margin-bottom: -1rpx;border-bottom:4rpx solid  #d33a31}
+.cntloading{padding: 50rpx 0;text-align: center;color: #888;font-size: 26rpx;}
+.cntloading view{display: inline-block;vertical-align: baseline;height: 30rpx;overflow: hidden;margin-left: 10rpx;}
+.cntloading text{width: 5rpx;height: 30rpx;background-color: #d33a31;position: relative;display: inline-block;margin-right: 6rpx;
+border-radius: 3rpx;animation: cnloading .9s linear infinite; transform-origin: center bottom;}
+.cntloading .cl2{ animation-delay: -.6s}
+.cntloading .cl3{animation-delay: -.3s}
+@keyframes circle{
+	0%{transform: rotate(0deg)}
+	100%{ transform: rotate(360deg)}
+}
+@keyframes cnloading{
+	0%{ transform: translateY(0rpx)}
+	50%{ transform: translateY(20rpx)}
+	100%{ transform: translateY(0rpx)}
+}

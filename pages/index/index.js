@@ -10,8 +10,10 @@ Page({
     rec: {
       idx: 0, loading: false,
     },
-    banner: [4],
-    remd_list: {},
+    banner_list: [],
+    remd_list: [],
+    newsong:[],
+    loading: true,
     thisday: (new Date()).getDate(),
     cateisShow: false
   },
@@ -22,7 +24,7 @@ Page({
       wx.navigateTo({
         url: url,
         success: function () {
-          console.log("success")
+          // console.log("success")
         }
       })
       return;
@@ -30,9 +32,6 @@ Page({
   },
   onShow: function () {
     !this.data.rec.loading && this.init();
-  },
-  numToStr: function(str){
-    return str >= 1e8 ? Math.floor(str / 1e7) / 10 + "亿" : str >= 1e5 ? Math.floor(str / 1e3) / 10 + "万" : str
   },
   init: function () {
     var that = this
@@ -43,6 +42,7 @@ Page({
       data: { cookie: app.globalData.cookie },
       success: function (res) {
         that.setData({
+          banner_list:res.data,
           banner: res.data.banners
         })
       }
@@ -54,10 +54,11 @@ Page({
         success: function (res) {
           let result = res.data.result;
           for (let i = 0; i < result.length; i++) {
-            result[i].playCount = that.numToStr(result[i].playCount);
+            result[i].playCount = common.numToStr(result[i].playCount);
           }
-          console.log(result);
+        
           that.setData({
+            remd_list:res.data,
             remd: result
           });
         }
@@ -68,6 +69,7 @@ Page({
         data: { cookie: app.globalData.cookie },
         success: function (res) {
           that.setData({
+            newsong: res.data,
             sglist: res.data.result
           })
         }
