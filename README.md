@@ -2,7 +2,7 @@
 仿网易云音乐小程序
 
 ## 运行截图
-![首页](http://ojekk8779.bkt.clouddn.com/Kapture%202017-09-24%20at%2012.29.08.gif)
+![首页](http://ojekk8779.bkt.clouddn.com/TIM%E6%88%AA%E5%9B%BE20170921185007.png)
 ![首页](http://ojekk8779.bkt.clouddn.com/Kapture%202017-09-24%20at%2012.26.03.gif)
 ![首页](http://ojekk8779.bkt.clouddn.com/Kapture%202017-09-24%20at%2012.26.54.gif)
 
