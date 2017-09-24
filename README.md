@@ -2,8 +2,9 @@
 仿网易云音乐小程序
 
 ## 运行截图
-![首页](http://ojekk8779.bkt.clouddn.com/TIM%E6%88%AA%E5%9B%BE20170921185007.png)
-![首页](http://ojekk8779.bkt.clouddn.com/TIM%E6%88%AA%E5%9B%BE20170921185020.png)
+![首页](http://ojekk8779.bkt.clouddn.com/Kapture%202017-09-24%20at%2011.52.05.gif)
+![首页](http://ojekk8779.bkt.clouddn.com/Kapture%202017-09-24%20at%2011.52.43.gif)
+![首页](http://ojekk8779.bkt.clouddn.com/Kapture%202017-09-24%20at%2011.53.31.gif)
 
 ## nodejs代理获取数据
 ![nodejs版网易云音乐api](http://ojekk8779.bkt.clouddn.com/FireShot%20Capture%2028%20-%20NeteaseCloudMusicApi%20-%20_%20-%20https___binaryify.github.io_NeteaseCloudMusicApi_%23_.png)
